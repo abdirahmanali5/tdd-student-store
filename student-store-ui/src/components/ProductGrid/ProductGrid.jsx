@@ -3,7 +3,7 @@ import "./ProductGrid.css"
 
 
 export default function ProductGrid(props){
-    console.log(props);
+    console.log("This is in Grid:", props);
     //renderes based on if there are items in the filtered or category arrays,
     //else renders error with a message.
     if(props.categoryArr.length > 0){

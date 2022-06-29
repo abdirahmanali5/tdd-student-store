@@ -12,7 +12,7 @@ export default function Contact(){
                     <h4 className="desc">Address: 123 Real Street, San Francisco, CA</h4>
                 </div>
                 <div className="contact-img">
-                    <img src={image} alt="Cool Picture" width={370} height={370} className="image"></img>
+                    <img src={""} alt="Cool Picture" width={370} height={370} className="image"></img>
                 </div>
             </div>
         </div>

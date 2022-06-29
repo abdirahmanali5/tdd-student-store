@@ -1,5 +1,5 @@
 import * as React from "react"
-import ShoppingCart from "../ShoppingCart/ShoppingCart"
+// import ShoppingCart from "../ShoppingCart/ShoppingCart"
 import "./Sidebar.css"
 import CheckoutForm from "../CheckoutForm/CheckoutForm"
 export default function Sidebar(props) {
@@ -32,7 +32,7 @@ export default function Sidebar(props) {
               <line x1="11" y1="15" x2="13" y2="15" />
           </svg>
         </button>
-      <ShoppingCart isOpen={props.isOpen} products={props.getProducts} shoppingCart={props.shoppingCart}/>
+      {/* <ShoppingCart isOpen={props.isOpen} products={props.getProducts} shoppingCart={props.shoppingCart}/> */}
       <CheckoutForm 
         isOpen={props.isOpen} 
         shoppingCart={props.shoppingCart} 

@@ -2,7 +2,7 @@ import * as React from "react"
 import "./Home.css"
 import Hero from "../Hero/Hero"
 import ProductGrid from "../ProductGrid/ProductGrid"
-import SubNavbar from "../SubNavbar/SubNavbar"
+// import SubNavbar from "../SubNavbar/SubNavbar"
 import Contact from "../Contact/Contact"
 import About from "../About/About"
 
@@ -15,10 +15,10 @@ export default function Home(props) {
       <div className="home-wrapper">
         <Hero />
       </div>
-      <SubNavbar 
+      {/* <SubNavbar 
         setInput={props.setInput}         
         setCategory={props.setCategory}
-        />
+        /> */}
       <ProductGrid 
         products={props.products} 
         handleAddItemToCart={props.handleAddItemToCart} 

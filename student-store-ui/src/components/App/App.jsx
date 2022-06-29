@@ -27,18 +27,27 @@ export default function App() {
 
 
   //Gets the products using the API and stores them
-  async function getProducts(){
+  
+  function getProducts(){
     setFetching(true);
-    const data = await axios.get("https://codepath-store-api.herokuapp.com/store")
+    axios
+    .get("https://codepath-store-api.herokuapp.com/store")
     .then((e) => {
-      setProducts(e.data.products);
+      let data = e.data.products
+      console.log("in Data:",data)
+      setProducts(data);
     })
     .catch((error) => {
       setError("Error r r r ... ");
     })
+
   }
   
-  React.useEffect(() => {getProducts()},[])
+  React.useEffect(() => {
+    getProducts();
+    console.log("in App :",products)
+  },[] );
+  
   
   //Gets the filtered products using the input and stores them
   let filterArr = [];

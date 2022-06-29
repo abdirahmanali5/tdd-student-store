@@ -1,6 +1,6 @@
 
 
-.sidebar {
+ .sidebar {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,4 +16,4 @@
     padding-bottom: 2rem;
     background: var(--dark-blue);
     border-right: solid 1px white;
-}
+} 
