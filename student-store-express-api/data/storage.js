@@ -26,3 +26,4 @@ class Storage {
 module.exports = {
   storage: new Storage(),
 }
+// storage.get("products").value()

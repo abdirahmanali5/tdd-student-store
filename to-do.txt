@@ -1,0 +1,5 @@
+We need to create checkout and connect the checkout to the api call
+
+do search bar by filtering search
+do subnavbar
+

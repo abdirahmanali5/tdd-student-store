@@ -1,10 +1,11 @@
 import * as React from "react"
-// import ShoppingCart from "../ShoppingCart/ShoppingCart"
+import ShoppingCart from "../ShoppingCart/ShoppingCart"
 import "./Sidebar.css"
+import "../CheckoutForm/CheckoutForm.css"
 import CheckoutForm from "../CheckoutForm/CheckoutForm"
 export default function Sidebar(props) {
   return (
-    <section className={props.isOpen ? "sidebar" : "sidebar closed"}>
+    <section className={props.isOpen ? "sidebar" : "sidebar-closed"}>
       <button className="toggle-button" onClick={props.handleOnToggle}>
           <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-arrow-bar-right" width="40" height="40" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#2c3e50" fill="none" strokeLinecap="round" strokeLinejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -14,8 +15,8 @@ export default function Sidebar(props) {
             <line x1="4" y1="4" x2="4" y2="20" />
             </svg>
         </button>
-        <button className={props.isOpen ? "closed" : "checkout-Btn"}>
-          <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-checkbox" width="24" height="24" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
+        <button className={props.isOpen ? "closed" : "checkout-Btn"} >
+          <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-checkbox" width="24" height="24" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000"  fill="none" strokeLinecap="round" strokeLinejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
               <polyline points="9 11 12 14 20 6" />
               <path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" />
@@ -24,7 +25,7 @@ export default function Sidebar(props) {
         
         
         <button className={props.isOpen ? "closed" : "checkout-Btn"}>
-          <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-credit-card" width="24" height="24" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
+          <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-credit-card" width="24" height="24" viewBox="0 0 24 24" strokeWidth="1.5"  stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
               <rect x="3" y="5" width="18" height="14" rx="3" />
               <line x1="3" y1="10" x2="21" y2="10" />
@@ -32,7 +33,8 @@ export default function Sidebar(props) {
               <line x1="11" y1="15" x2="13" y2="15" />
           </svg>
         </button>
-      {/* <ShoppingCart isOpen={props.isOpen} products={props.getProducts} shoppingCart={props.shoppingCart}/> */}
+      <ShoppingCart isOpen={props.isOpen} products={props.getProducts} shoppingCart={props.shoppingCart}/>
+      <div className={props.isOpen ? "closedForm" : "checkout-Form"}></div>
       <CheckoutForm 
         isOpen={props.isOpen} 
         shoppingCart={props.shoppingCart} 
@@ -41,6 +43,7 @@ export default function Sidebar(props) {
         handleOnSubmitCheckoutForm={props.handleOnSubmitCheckoutForm}
         success={props.success}
       />
+      <div/>
     </section>
   )
 }

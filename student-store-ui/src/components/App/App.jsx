@@ -11,6 +11,39 @@ import Contact from "../Contact/Contact"
 import Footer from "../Footer/Footer"
 import NotFound from "../Not Found/NotFound"
 
+// const express = require("express");
+// const morgan = require("morgan");
+// const app = express();
+
+
+// app.use(express.json());
+// app.use(morgan("tiny"));
+
+// app.post("/", (req, res) => {
+//   res.end();
+// });
+
+// app.get("/", (req, res) => {
+//   res.send({ ping: "pong" });
+// });
+
+// // app.use("/gift-exchange", giftExchange);
+
+
+// app.use((req,res,next) => {
+//     return next(new errors.NotFoundError());
+// })
+
+// app.use((err,req,res,next) => {
+//     const status = err.status || 500;
+//     const message = err.message || "Something went wrong in the application"
+//     return res.status(err.status || 500).json({
+//         error: {message, status}
+//     });
+// })
+
+// module.exports = app;
+
 
 
 
@@ -19,7 +52,7 @@ export default function App() {
   const[products, setProducts] = React.useState([]);
   const[error, setError] = React.useState("");
   const[isOpen, setOpen] = React.useState(false);
-  const[shoppingCart, setShoppingCart] = React.useState([{itemId:"", quantity: 0}]);
+  const[shoppingCart, setShoppingCart] = React.useState([]);
   const[checkOutForm, setCheckOutForm] = React.useState({value:0, name:""});
   const[input, setInput] = React.useState("");
   const[category,setCategory] = React.useState("");
@@ -111,8 +144,9 @@ export default function App() {
     if(found){
       let index = shoppingCart.indexOf(item);
       let newArr = [...shoppingCart];
-      if(newArr[index].quantity === 0){
-        newArr[index].quantity = 0;
+      if(newArr[index].quantity <= 0){
+        newArr[index].quantity = "";
+        newArr[index].itemId = "";
         setShoppingCart(newArr);
       }
       else{
@@ -136,8 +170,8 @@ export default function App() {
   //Need to finish
   async function handleOnSubmitCheckoutForm(){
     axios.post("https://codepath-store-api.herokuapp.com/store", {
-      user:{name:"", email:""},
-      ShoppingCart: [{itemId:0, quantity:0}]
+      "user":{"name":checkOutForm.name, "email": checkOutForm.email},
+      "shoppingCart": shoppingCart
     })
     .then(() => {
       setSuccess(true);
@@ -185,4 +219,4 @@ export default function App() {
       </BrowserRouter>
     </div>
   )
-}
+            }

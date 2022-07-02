@@ -4,16 +4,30 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 50;
     flex: 1;
     transition: all .2s cubic-bezier(.215,.61,.355,1);
     position: fixed;
-    z-index: 100;
+    z-index: 50px;
     top: 0px;
     height: 100vh;
     padding: 0;
     overflow-y: scroll;
     padding-bottom: 2rem;
-    background: var(--dark-blue);
+    background: #333;
     border-right: solid 1px white;
+    border: 2px solid#00c385;
 } 
+.checkout-Btn {
+    visibility:hidden;
+
+}
+.checkout-Form {
+    visibility:hidden;
+    
+}
+
+
+
+
+

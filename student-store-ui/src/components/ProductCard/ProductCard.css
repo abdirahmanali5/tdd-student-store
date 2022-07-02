@@ -1,7 +1,7 @@
 .product-card{
     display: flex;
     justify-content: space-around;
-    flex-direction: column;
+    flex-direction: row;
     border-style: solid;
     border-color: #00c385;
     margin: 10px;
