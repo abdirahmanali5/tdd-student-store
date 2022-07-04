@@ -173,8 +173,8 @@ The following specifications were met on the Express backend and the React front
   - `showDescription` - boolean
 - [X] Should render the `name` of the product inside an element with the `className` of `product-name`
 - [X] Should render the `price` of the product inside an element with the `className` of `product-price`. The price should formatted so that it starts with a `$`, and has **at least one** integer digit, along with **exactly two** decimal digits. Examples - `$22.99`, `$860.20`, and `$0.50`
-- [X ] If the `showDescription` prop is set to `true`, it should render the `description` of the product inside an element with the `className` of `product-description`.
-- [X ] Should render an `img` element for the product:
+- [X] If the `showDescription` prop is set to `true`, it should render the `description` of the product inside an element with the `className` of `product-description`.
+- [X] Should render an `img` element for the product:
   - [X] The `img` element should have a `src` attribute to set to the `image` property of the `product` prop.
   - [X] The `img` element should be wrapped in a `Link` component from `react-router-dom`.
     - [X] The `Link` element should have a `to` prop so that when the `img` element is clicked on, it should navigate to the product detail route for that product using its `id` attribute. For example, a product with an `id` of `4` should create a `Link` with its `to` prop set to `/products/4`.
@@ -291,7 +291,7 @@ The following specifications were met on the Express backend and the React front
 ### Reflection
 
 - Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
-  A lot of it felt like it was a comfortable stretch from our knowledge base given to us in the labs
+  A lot of it felt like it was a comfortable stretch from our base of knoweldge that we gained from the lab
 
 - If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
  I would work on making the purchase order more functional
@@ -301,7 +301,7 @@ Add your response here
 - Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
   My searchbar was bugging so I had to comment it out so I can demo the rest of my code
 
-Add your response here
+
 
 ### Open-source libraries used
 
